@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Cardápio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .title {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .info-container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid black;
+    }
+    textarea {
+      width: 100%;
+      resize: none;
+      height: 90px;
+    }
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div th:replace="navbar"></div>
+<h1 class="title">Crie seu Cardápio</h1>
+<div class="info-container">
+  <form th:action="@{/cardapio/salvar}" method="post" th:object="${cardapio}">
+    <table>
+      <thead>
+      <tr>
+        <th>Segunda-Feira</th>
+        <th>Terça-Feira</th>
+        <th>Quarta-Feira</th>
+        <th>Quinta-Feira</th>
+        <th>Sexta-Feira</th>
+        <th>Sábado</th>
+        <th>Domingo</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label>Café da Manhã</label>
+            <textarea th:field="*{segunda_cafe_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Lanchinho da Manhã</label>
+            <textarea th:field="*{segunda_lanche_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Almoço</label>
+            <textarea th:field="*{segunda_almoco}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Café da Tarde</label>
+            <textarea th:field="*{segunda_cafe_tarde}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Janta</label>
+            <textarea th:field="*{segunda_janta}"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </td>
+        <td>
+          <div class="form-group">
+            <label>Café da Manhã</label>
+            <textarea th:field="*{terca_cafe_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Lanchinho da Manhã</label>
+            <textarea th:field="*{terca_lanche_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Almoço</label>
+            <textarea th:field="*{terca_almoco}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Café da Tarde</label>
+            <textarea th:field="*{terca_cafe_tarde}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Janta</label>
+            <textarea th:field="*{terca_janta}"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </td>
+        <td>
+          <div class="form-group">
+            <label>Café da Manhã</label>
+            <textarea th:field="*{quarta_cafe_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Lanchinho da Manhã</label>
+            <textarea th:field="*{quarta_lanche_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Almoço</label>
+            <textarea th:field="*{quarta_almoco}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Café da Tarde</label>
+            <textarea th:field="*{quarta_cafe_tarde}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Janta</label>
+            <textarea th:field="*{quarta_janta}"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </td>
+        <td>
+          <div class="form-group">
+            <label>Café da Manhã</label>
+            <textarea th:field="*{quinta_cafe_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Lanchinho da Manhã</label>
+            <textarea th:field="*{quinta_lanche_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Almoço</label>
+            <textarea th:field="*{quinta_almoco}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Café da Tarde</label>
+            <textarea th:field="*{quinta_cafe_tarde}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Janta</label>
+            <textarea th:field="*{quinta_janta}"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </td>
+        <td>
+          <div class="form-group">
+            <label>Café da Manhã</label>
+            <textarea th:field="*{sexta_cafe_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Lanchinho da Manhã</label>
+            <textarea th:field="*{sexta_lanche_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Almoço</label>
+            <textarea th:field="*{sexta_almoco}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Café da Tarde</label>
+            <textarea th:field="*{sexta_cafe_tarde}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Janta</label>
+            <textarea th:field="*{sexta_janta}"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </td>
+        <td>
+          <div class="form-group">
+            <label>Café da Manhã</label>
+            <textarea th:field="*{sabado_cafe_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Lanchinho da Manhã</label>
+            <textarea th:field="*{sabado_lanche_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Almoço</label>
+            <textarea th:field="*{sabado_almoco}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Café da Tarde</label>
+            <textarea th:field="*{sabado_cafe_tarde}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Janta</label>
+            <textarea th:field="*{sabado_janta}"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </td>
+        <td>
+          <div class="form-group">
+            <label>Café da Manhã</label>
+            <textarea th:field="*{domingo_cafe_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Lanchinho da Manhã</label>
+            <textarea th:field="*{domingo_lanche_manha}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Almoço</label>
+            <textarea th:field="*{domingo_almoco}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Café da Tarde</label>
+            <textarea th:field="*{domingo_cafe_tarde}"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Janta</label>
+            <textarea th:field="*{domingo_janta}"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </form>
+</div>
+
+<h2 class="title">Seu Cardápio</h2>
+<div class="info-container">
+  <table>
+    <thead>
+    <tr>
+      <th>Segunda-Feira</th>
+      <th>Terça-Feira</th>
+      <th>Quarta-Feira</th>
+      <th>Quinta-Feira</th>
+      <th>Sexta-Feira</th>
+      <th>Sábado</th>
+      <th>Domingo</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>
+        <div class="form-group">
+          <label>Café da Manhã</label>
+          <p th:text="${cardapio.segunda_cafe_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Lanchinho da Manhã</label>
+          <p th:text="${cardapio.segunda_lanche_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Almoço</label>
+          <p th:text="${cardapio.segunda_almoco}"></p>
+        </div>
+        <div class="form-group">
+          <label>Café da Tarde</label>
+          <p th:text="${cardapio.segunda_cafe_tarde}"></p>
+        </div>
+        <div class="form-group">
+          <label>Janta</label>
+          <p th:text="${cardapio.segunda_janta}"></p>
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <label>Café da Manhã</label>
+          <p th:text="${cardapio.terca_cafe_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Lanchinho da Manhã</label>
+          <p th:text="${cardapio.terca_lanche_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Almoço</label>
+          <p th:text="${cardapio.terca_almoco}"></p>
+        </div>
+        <div class="form-group">
+          <label>Café da Tarde</label>
+          <p th:text="${cardapio.terca_cafe_tarde}"></p>
+        </div>
+        <div class="form-group">
+          <label>Janta</label>
+          <p th:text="${cardapio.terca_janta}"></p>
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <label>Café da Manhã</label>
+          <p th:text="${cardapio.quarta_cafe_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Lanchinho da Manhã</label>
+          <p th:text="${cardapio.quarta_lanche_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Almoço</label>
+          <p th:text="${cardapio.quarta_almoco}"></p>
+        </div>
+        <div class="form-group">
+          <label>Café da Tarde</label>
+          <p th:text="${cardapio.quarta_cafe_tarde}"></p>
+        </div>
+        <div class="form-group">
+          <label>Janta</label>
+          <p th:text="${cardapio.quarta_janta}"></p>
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <label>Café da Manhã</label>
+          <p th:text="${cardapio.quinta_cafe_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Lanchinho da Manhã</label>
+          <p th:text="${cardapio.quinta_lanche_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Almoço</label>
+          <p th:text="${cardapio.quinta_almoco}"></p>
+        </div>
+        <div class="form-group">
+          <label>Café da Tarde</label>
+          <p th:text="${cardapio.quinta_cafe_tarde}"></p>
+        </div>
+        <div class="form-group">
+          <label>Janta</label>
+          <p th:text="${cardapio.quinta_janta}"></p>
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <label>Café da Manhã</label>
+          <p th:text="${cardapio.sexta_cafe_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Lanchinho da Manhã</label>
+          <p th:text="${cardapio.sexta_lanche_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Almoço</label>
+          <p th:text="${cardapio.sexta_almoco}"></p>
+        </div>
+        <div class="form-group">
+          <label>Café da Tarde</label>
+          <p th:text="${cardapio.sexta_cafe_tarde}"></p>
+        </div>
+        <div class="form-group">
+          <label>Janta</label>
+          <p th:text="${cardapio.sexta_janta}"></p>
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <label>Café da Manhã</label>
+          <p th:text="${cardapio.sabado_cafe_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Lanchinho da Manhã</label>
+          <p th:text="${cardapio.sabado_lanche_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Almoço</label>
+          <p th:text="${cardapio.sabado_almoco}"></p>
+        </div>
+        <div class="form-group">
+          <label>Café da Tarde</label>
+          <p th:text="${cardapio.sabado_cafe_tarde}"></p>
+        </div>
+        <div class="form-group">
+          <label>Janta</label>
+          <p th:text="${cardapio.sabado_janta}"></p>
+        </div>
+      </td>
+      <td>
+        <div class="form-group">
+          <label>Café da Manhã</label>
+          <p th:text="${cardapio.domingo_cafe_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Lanchinho da Manhã</label>
+          <p th:text="${cardapio.domingo_lanche_manha}"></p>
+        </div>
+        <div class="form-group">
+          <label>Almoço</label>
+          <p th:text="${cardapio.domingo_almoco}"></p>
+        </div>
+        <div class="form-group">
+          <label>Café da Tarde</label>
+          <p th:text="${cardapio.domingo_cafe_tarde}"></p>
+        </div>
+        <div class="form-group">
+          <label>Janta</label>
+          <p th:text="${cardapio.domingo_janta}"></p>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
